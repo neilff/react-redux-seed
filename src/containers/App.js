@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import { loginUser, logoutUser } from '../actions/session';
 
 import { Link } from 'react-router';
-import Button from '../components/ui/Button';
-import Content from '../components/ui/Content';
+import Button from '../components/common/Button';
+import Content from '../components/common/Content';
 import LoginModal from '../components/login/LoginModal';
-import Logo from '../components/ui/Logo';
+import Logo from '../components/common/Logo';
 import Navigator from '../components/navigator/Navigator';
 import NavigatorItem from '../components/navigator/NavigatorItem';
 

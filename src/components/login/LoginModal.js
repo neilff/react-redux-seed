@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Modal from '../ui/Modal';
-import ModalContent from '../ui/ModalContent';
+import Modal from '../common/Modal';
+import ModalContent from '../common/ModalContent';
 import LoginForm from '../login/LoginForm';
 
 const LoginModal = ({ isVisible, isPending, hasError, onSubmit }) => {

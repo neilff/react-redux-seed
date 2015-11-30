@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Container from '../components/ui/Container';
-import Column from '../components/ui/Column';
+import Container from '../components/common/Container';
+import Column from '../components/common/Column';
 
 function mapStateToProps() {
   return {};

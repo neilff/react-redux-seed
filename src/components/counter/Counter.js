@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../ui/Button';
+import Button from '../common/Button';
 
 const Counter = ({ counter, increment, decrement }) => {
   return (

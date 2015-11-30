@@ -1,13 +1,13 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 
-import Form from '../ui/Form';
-import FormGroup from '../ui/FormGroup';
-import FormLabel from '../ui/FormLabel';
-import FormError from '../ui/FormError';
-import Input from '../ui/Input';
-import Button from '../ui/Button';
-import Alert from '../ui/Alert';
+import Form from '../common/Form';
+import FormGroup from '../common/FormGroup';
+import FormLabel from '../common/FormLabel';
+import FormError from '../common/FormError';
+import Input from '../common/Input';
+import Button from '../common/Button';
+import Alert from '../common/Alert';
 
 const validate = values => {
   const errors = {};
