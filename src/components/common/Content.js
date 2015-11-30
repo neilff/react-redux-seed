@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const Content = ({ children, isVisible }) => {
   const visibleClass = isVisible ? 'block' : 'hide';
@@ -10,6 +10,17 @@ const Content = ({ children, isVisible }) => {
       { children }
     </div>
   );
+};
+
+Content.displayName = 'Content';
+Content.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
+Content.defaultProps = {
+  className: '',
+  style: {},
 };
 
 const styles = {
