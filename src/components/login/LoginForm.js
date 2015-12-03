@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 
 import Form from '../common/Form';
@@ -67,6 +67,16 @@ const LoginForm = (props) => {
     </Form>
   );
 };
+
+LoginForm.displayName = 'LoginForm';
+LoginForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  resetForm: PropTypes.func.isRequired,
+  isPending: PropTypes.bool.isRequired,
+  hasError: PropTypes.bool.isRequired,
+  fields: PropTypes.object.isRequired,
+};
+LoginForm.defaultProps = {};
 
 export default reduxForm({
   form: 'login',

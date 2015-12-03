@@ -15,13 +15,9 @@ const Content = ({ children, isVisible }) => {
 Content.displayName = 'Content';
 Content.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-  style: PropTypes.object,
+  isVisible: PropTypes.bool.isRequired,
 };
-Content.defaultProps = {
-  className: '',
-  style: {},
-};
+Content.defaultProps = {};
 
 const styles = {
   base: {},

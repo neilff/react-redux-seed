@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import Button from '../common/Button';
 
@@ -29,6 +29,14 @@ const Counter = ({ counter, increment, decrement }) => {
     </div>
   );
 };
+
+Counter.displayName = 'Counter';
+Counter.propTypes = {
+  counter: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+};
+Counter.defaultProps = {};
 
 const styles = {
   squareButton: {

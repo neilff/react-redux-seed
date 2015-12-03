@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const ModalContent = ({ children, style = {}, className = '' }) => {
+const ModalContent = ({ children, style, className }) => {
   return (
     <div
       className={ `${ className } p1 z4 bg-white` }
@@ -8,6 +8,17 @@ const ModalContent = ({ children, style = {}, className = '' }) => {
       { children }
     </div>
   );
+};
+
+ModalContent.displayName = 'ModalContent';
+ModalContent.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  style: PropTypes.object,
+};
+ModalContent.defaultProps = {
+  className: '',
+  style: {},
 };
 
 const styles = {

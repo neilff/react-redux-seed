@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const FormError = ({ children, isVisible, style = {}, className = ''}) => {
+const FormError = ({ children, isVisible, style, className}) => {
   const visibleClass = isVisible ? 'block' : 'hide';
 
   return (
@@ -10,6 +10,18 @@ const FormError = ({ children, isVisible, style = {}, className = ''}) => {
       { children }
     </div>
   );
+};
+
+FormError.displayName = 'FormError';
+FormError.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  isVisible: PropTypes.bool.isRequired,
+  style: PropTypes.object,
+};
+FormError.defaultProps = {
+  className: '',
+  style: {},
 };
 
 const styles = {

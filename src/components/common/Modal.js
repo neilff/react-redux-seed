@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const Modal = ({ isVisible, children, style = {} }) => {
+const Modal = ({ isVisible, children, style }) => {
   const visibleStyle = isVisible ? styles.visible : styles.hidden;
 
   return (
@@ -10,6 +10,17 @@ const Modal = ({ isVisible, children, style = {} }) => {
       { children }
     </div>
   );
+};
+
+Modal.displayName = 'Modal';
+Modal.propTypes = {
+  className: PropTypes.string,
+  isVisible: PropTypes.bool.isRequired,
+  style: PropTypes.object,
+};
+Modal.defaultProps = {
+  className: '',
+  style: {},
 };
 
 const styles = {
