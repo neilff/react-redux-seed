@@ -23,6 +23,7 @@ function sessionReducer(state = INITIAL_STATE, action = {}) {
       user: {},
       hasError: false,
       isLoading: true,
+      message: null,
     }));
 
   case LOGIN_USER_SUCCESS:
@@ -40,7 +41,12 @@ function sessionReducer(state = INITIAL_STATE, action = {}) {
     }));
 
   case LOGOUT_USER:
-    return state.merge(INITIAL_STATE);
+    return state.merge(INITIAL_STATE)
+                .update(i => {
+                  return action.payload && action.payload.message ?
+                    i.set('message', action.payload.message) :
+                    i;
+                });
 
   default:
     return state;

@@ -6,7 +6,7 @@ import persistState from 'redux-localstorage';
 import history from './history';
 import routes from './routes';
 import thunk from 'redux-thunk';
-import promiseMiddleware from '../middleware/promiseMiddleware';
+import request from '../middleware/requestMiddleware';
 import logger from './logger';
 import rootReducer from '../reducers';
 
@@ -24,8 +24,8 @@ const storageConfig = {
 function configureStore(initialState) {
   const store = compose(
   __DEV__
-  ? applyMiddleware(promiseMiddleware, thunk, logger)
-  : applyMiddleware(promiseMiddleware, thunk),
+  ? applyMiddleware(request, thunk, logger)
+  : applyMiddleware(request, thunk),
     reduxReactRouter({
       routes,
       history,

@@ -29,6 +29,7 @@ const LoginForm = (props) => {
     resetForm,
     isPending,
     hasError,
+    message,
     fields: {
       username,
       password,
@@ -39,6 +40,7 @@ const LoginForm = (props) => {
     <Form handleSubmit={ handleSubmit }>
       <Alert isVisible={ isPending }>Loading...</Alert>
       <Alert isVisible={ hasError } status="error">Invalid username and password</Alert>
+      <Alert isVisible={ message } status="warning">{ message }</Alert>
 
       <FormGroup>
         <FormLabel>Username</FormLabel>

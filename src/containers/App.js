@@ -33,6 +33,7 @@ const App = ({ children, session, login, logout }) => {
     <div>
       <LoginModal
         onSubmit={ login }
+        message={ session.get('message') }
         isPending={ session.get('isLoading', false) }
         hasError={ session.get('hasError', false) }
         isVisible={ !isLoggedIn } />
@@ -42,10 +43,7 @@ const App = ({ children, session, login, logout }) => {
             <Logo />
           </NavigatorItem>
           <NavigatorItem isVisible={ isLoggedIn } className="p1">
-            <Link to="/">Counter</Link>
-          </NavigatorItem>
-          <NavigatorItem isVisible={ isLoggedIn } className="p1">
-            <Link to="/about">About Us</Link>
+            <Link to="/">About Us</Link>
           </NavigatorItem>
         </div>
         <div className="flex flex-end">
