@@ -31,14 +31,13 @@ class About extends Component {
 
   render() {
     const { content } = this.props;
+    const isLoading = content.get('isLoading');
 
     return (
       <Container>
         <Column className="col-12">
-          <h1>{ content.get('title') }</h1>
-          <p>
-            { content.get('body') }
-          </p>
+          <h1>{ isLoading ? 'Loading...' : content.get('title') }</h1>
+          <p>{ isLoading ? '' : content.get('body') }</p>
         </Column>
       </Container>
     );

@@ -23,7 +23,8 @@ function contentReducer(state = INITIAL_STATE, action = {}) {
     }));
 
   case LOAD_CONTENT_SUCCESS:
-    return state.merge(fromJS(action.payload));
+    return state.merge(fromJS(action.payload))
+                .set('isLoading', false);
 
   case LOAD_CONTENT_ERROR:
     return INITIAL_STATE;

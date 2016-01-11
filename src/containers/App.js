@@ -26,7 +26,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 const App = ({ children, session, login, logout }) => {
-  const token = session.get('token', false);
+  const token = session.get('token', null);
   const isLoggedIn = token && token !== null && typeof token !== 'undefined';
 
   return (
